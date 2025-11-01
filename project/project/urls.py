@@ -23,5 +23,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("styles/", veiws.style_page),
     path('app/', include('first_app.urls')),
-    path("req/", include('pet_proj.urls'))
+    path("req/", include('pet_proj.urls')),
+    path("boards/", include("boards.urls"))
 ]
