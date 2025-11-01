@@ -1,0 +1,16 @@
+body {
+    background-color: #f0f0f0;
+    font-family: "Segoe UI", sans-serif;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1 {
+    color: #3366ff;
+    text-shadow: 2px 2px #999;
+}
+
+p {
+    color: #555;
+    font-size: 18px;
+}

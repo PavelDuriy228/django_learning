@@ -17,9 +17,11 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from . import veiws
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("styles/", veiws.style_page),
     path('app/', include('first_app.urls')),
-    path("req/", include('pet_proj.urls'))    
+    path("req/", include('pet_proj.urls'))
 ]
