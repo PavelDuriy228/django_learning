@@ -12,7 +12,7 @@ def home_page(request: HttpRequest):
 def test_page(req: HttpRequest):
     return render(
         req,
-        'test.html\\'
+        'test.html'
     )
 
 def get_submit_data(request, id):
