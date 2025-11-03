@@ -1,5 +1,18 @@
 {% extends 'board/base.html' %}
 {% block title %}Объявления{% endblock title %}
 {% block content %}
-<h1>Здесь будут объявления 📢</h1>
+<h1>Объявления</h1>
+{% if bulletins %}
+  <ul>
+    {% for b in bulletins %}
+      <li>
+        <h3>{{ b.title }}</h3>
+        <p>{{ b.description }}</p>
+        <small><i>{{ b.created_at|date:"d.m.Y H:i" }}</i></small>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>Объявлений пока нет.</p>
+{% endif %}
 {% endblock content %}

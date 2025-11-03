@@ -1,5 +1,18 @@
 {% extends 'board/base.html' %}
 {% block title %}Новости{% endblock title %}
 {% block content %}
-<h1>Здесь будут новости 📰</h1>
+<h1>Новости</h1>
+{% if news_list %}
+  <ul>
+    {% for item in news_list %}
+      <li>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.content }}</p>
+        <small><i>{{ item.created_at|date:"d.m.Y H:i" }}</i></small>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>Новостей пока нет.</p>
+{% endif %}
 {% endblock content %}
