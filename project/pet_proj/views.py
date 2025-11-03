@@ -6,7 +6,7 @@ from django.http import HttpRequest, JsonResponse
 def  home_page(request: HttpRequest):
     return render(
         request, 
-        'pet_proj\\templates\learn_page.html'
+        'pet_proj_templates\learn_page.html'
     )
 
 def get_submit_data(request, id):
