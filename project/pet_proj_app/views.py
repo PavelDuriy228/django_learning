@@ -3,10 +3,16 @@ from django.shortcuts import render
 from django.http import HttpRequest, JsonResponse
 # Create your views here.
 
-def  home_page(request: HttpRequest):
+def home_page(request: HttpRequest):
     return render(
         request, 
-        'pet_proj\\templates\learn_page.html'
+        'pet_proj_app_templates\learn_page.html'
+    )
+
+def test_page(req: HttpRequest):
+    return render(
+        req,
+        'test.html\\'
     )
 
 def get_submit_data(request, id):
