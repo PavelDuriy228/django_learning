@@ -15,3 +15,11 @@ def bullet_page(request):
 
 def resp_page(request):
     return render(request, 'boards_app_templates\\boards\\resp.html')
+
+def param_page(req):
+    param = 'Apple'
+    return render(
+        req, 
+        'boards_app_templates\\boards\\param.html', 
+        {'param':param}
+    )

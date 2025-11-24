@@ -6,4 +6,5 @@ urlpatterns = [
     path('news/', views.news_page, name='news'),
     path('bullet/', views.bullet_page, name='bullet'),
     path('resp/', views.resp_page, name='resp'),
+    path('param/', views.param_page, name = 'param')
 ]

@@ -1,0 +1,10 @@
+{% extends 'boards_app_templates/boards/base.html' %}
+{% block title %}Контекстные переменные{% endblock %}
+
+{% block content %}
+<h1>Пример контекстной переменной</h1>
+
+<p>Переменная, переданная из views.py:</p>
+<h2>{{ param }}</h2>
+
+{% endblock %}
