@@ -3,22 +3,28 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Доска объявлений{% endblock title %}</title>
     <link href="{% static 'css/styles.css' %}?v=1" rel="stylesheet" />
 </head>
 <body>
 
-    <div class="menu">
+    <!-- Панель меню -->
+    <div class="menu" style="
+        background-color: #87CEFA; 
+        border: 5px solid yellow; 
+        padding: 15px;
+        text-align: center;
+    ">
         <h3 class="menu-title">Меню</h3>
+
         <div class="menu-bar">
-            <a href="{% url 'news' %}">Новости</a>
-            <a href="{% url 'bullet' %}">Объявления</a>
-            <a href="{% url 'resp' %}">Отклики</a>
+            <a href="{% url 'news' %}" style="color: blue; margin-right: 20px;">Новости</a>
+            <a href="{% url 'bullet' %}" style="color: blue; margin-right: 20px;">Объявления</a>
+            <a href="{% url 'resp' %}" style="color: blue;">Отклики</a>
         </div>
     </div>
 
-    <div class="content">
+    <div class="content" style="padding: 20px;">
         {% block content %}
         {% endblock content %}
     </div>

@@ -10,6 +10,7 @@ def news_page(request):
 
 def bullet_page(request):
     bullet_list = Bulletin.objects.order_by("-created_at")
+    
     return render(request, 'boards_app_templates\\boards\\bullet.html', {'bullet_list':bullet_list})
 
 def resp_page(request):

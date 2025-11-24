@@ -1,7 +1,9 @@
-{% extends 'boards/base.html' %}
+{% extends 'boards_app_templates/boards/base.html' %}
 {% block title %}Новости{% endblock title %}
+
 {% block content %}
 <h1>Новости</h1>
+
 {% if news_list %}
   <ul>
     {% for item in news_list %}
@@ -15,4 +17,5 @@
 {% else %}
   <p>Новостей пока нет.</p>
 {% endif %}
+
 {% endblock content %}
